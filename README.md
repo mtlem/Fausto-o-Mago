@@ -1,60 +1,49 @@
-# `<Fausto>`
+# Phaser 3 TypeScript Project Template
 
-* Link do jogo:
+This quick-start project template combines Phaser 3.60 with [TypeScript 5](https://www.typescriptlang.org/) and uses [Rollup](https://rollupjs.org) for bundling.
 
-## Motivação
+## Requirements
 
-A motivação deste projeto é desenvolver um jogo para disciplina de estágio 1, visando aprender a usar ferramentas de controle de versão e saber como é o dia-a-dia em um projeto.
+[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
 
-## Objetivo
+## Available Commands
 
-Fausto é um aprendiz de mago que já está prestes a concluir sua formação. Para isso, seu tutor o mandou para uma jornada em busca dos dos 3 magos, amigos de seu mestre, com o objetivo de derota-los. O Objetivo do jogo vai ser derrotar os 3 magos(junto de seus lacaios) o mais rápido possível, buscando assim ter um tempo menor que os outros jogadores, alcaçando assim uma melhor posição no ranking.
+| Command | Description |
+|---------|-------------|
+| `npm install` | Install project dependencies |
+| `npm run watch` | Build project and open web server running project, watching for changes |
+| `npm run dev` | Builds project and open web server, but do not watch for changes |
+| `npm run build` | Builds code bundle with production settings (minification, no source maps, etc..) |
 
-## Valor Agregado
+## Writing Code
 
-Aprender como funciona o desenvolvimento de um projeto na prática
+After cloning the repo, run `npm install` from your project directory. Then, you can start the local development
+server by running `npm run watch`. The first time you run this you should see the following demo run:
 
-## Fases
+![Screenshot](screenshot.png "Phaser 3 Example")
 
-O jogo terá no total de 3 fases. Cada fase vai apresentar inimigos relacionados ao cenário. No final de cada uma, quando o jogador tiver alcançado determinada quantidade de inimigos derrtotados, irá aparecer o mago de determinado cenário, que é o objetivo final da fase. Quando o combate terminar, Fausto será jogado para a próxima fase.
+After starting the development server with `npm run watch`, you can edit any files in the `src` folder
+and Rollup will automatically recompile and reload your server (available at `http://localhost:10001`
+by default).
 
-| Fases | Descrição |
-| ----- | ----------- |
-| 1     | A primeira fase será em um campo aberto, onde os inimigos serão animais selvages. O total de inimigos a serem derrotados para o mago da área aparecer será 25.
-| 2     | A segunda fase será em uma caverna de gelo, onde os unimigos serão golems e elemntais de gelo. O total de inimigos a serem derrotados para o mago aparecer será 35.
-| 3     | A terceira fase será em uma masmorra, onde os inimigos serão esqueletos e zumbis. O total de inimigos a serem derrotados para o mago aparecer será 50.
+## Configuring Rollup
 
-## O placar do jogo
+* Edit the file `rollup.config.dev.js` to edit the development build.
+* Edit the file `rollup.config.dist.js` to edit the distribution build.
 
-Como já foi abordado atrás,o jogo vai se focar em ser finalizado o mais rápido possível. Todas as 3 fases terão cronômetros que serão salvos até o final do jogo. Quando o jogador terminar de derrotar o último mago, irá aparecer uma tela com a soma dos tempos das 3 fases. Quanto menor for este tempo, melhor será seu lugar no ranking.
+You will find lots of comments inside the rollup config files to help you do this.
 
-## Requisitos
+Note that due to the build process involved, it can take around 20 seconds to build the initial bundle. Times will vary based on CPU and local drive speeds. The development config does not minify the code in order to save build time, but it does generate source maps. If you do not require these, disable them in the config to speed it up further.
 
-### Épicos/Funcionalidades
+## Versions Used
 
-1. `Menu Inicial`
-   Iniciar o jogo;
-   Placar geral;
-   Créditos;
-
-2. `Pontuação`
-   Os 5 melhores jogadores com menor tempo.
-3. `Créditos`
-   Artes e músicas;
-4. `Fases`
-   Cenário de cada fase;
-   itens;
-   Objetos do cenário;
-   Elementos de comando;
-   Músicas;
-
-### Personas
-
-1. **`<Fausto> - Personagem que o jogador irá controlar`**.
-2. **`<Eidar> - Mago da primeira fase`**.
-3. **`<Com> - Mago da segunda fase`**.
-4. **`<Tah> - Mago da terceira fase`**.
-
-## Protótipos de Tela
-
-![Diagrama](Diagrama.drawio.png)
+* Phaser 3.60
+* TypeScript 5.0.3
+* Rollup 3.20.2
+* Rollup Plugins:
+  * @rollup/plugin-commonjs 24.0.1
+  * @rollup/plugin-node-resolve 15.0.2
+  * @rollup/plugin-replace 5.0.2
+  * @rollup/plugin-terser 0.4.0
+  * @rollup/plugin-typescript 11.1.0
+  * rollup-plugin-serve 2.0.2
