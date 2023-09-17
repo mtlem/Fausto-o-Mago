@@ -1,0 +1,42 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "map.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "": {
+            "scaleInEditor": 1
+        },
+        "map.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 380.66666666666663,
+                "y": 236
+            }
+        },
+        "map.tmx#grass": {
+            "scaleInDock": 1.5
+        },
+        "map.tmx#water": {
+            "scaleInDock": 0.75
+        }
+    },
+    "last.exportedFilePath": "C:/Users/User/Documents/map",
+    "last.imagePath": "C:/Users/User/Documents/map",
+    "map.lastUsedExportFilter": "Ficheiros de mapa JSON (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 25,
+    "openFiles": [
+        "map.tmx"
+    ],
+    "project": "map.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "map.tmx"
+    ],
+    "tileset.embedInMap": true
+}
